@@ -1,12 +1,14 @@
-<form>
-    <input class="form-control" type="number" name="valorA" [(ngModel)]="valorA" >
-    <input class="form-control" type="number" name="valorB" [(ngModel)]="valorB" >
+<div class="content">
+  <form>
+      <input class="form-control" type="number" name="valorA" [(ngModel)]="valorA" >
+      <input class="form-control" type="number" name="valorB" [(ngModel)]="valorB" >
+      <div class="button-group">
+        <button class="form-button" (click)="somar()">+</button>
+        <button class="form-button" (click)="subtrair()">-</button>
+        <button class="form-button" (click)="multiplicar()">X</button>
+        <button class="form-button" (click)="dividir()">/</button>
+      </div>
+      <h3 class="result">{{resultado}}</h3>
+  </form>
+</div>
 
-    <select [(ngModel)]="escolha">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="X">X</option>
-        <option value="/">/</option>
-    </select>
-
-</form>
